@@ -1,0 +1,232 @@
+/* style.css */
+
+/* Fuente general, márgenes y colores base */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #d70b0b;
+  color: #333;
+}
+
+/* Encabezado */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0f0f0f;
+  padding: 10px 20px;
+  color: white;
+}
+
+/* Logo */
+.logo img {
+  height: 50px;
+}
+
+/* Menú */
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Banner */
+.banner img {
+  width: 100%;
+  max-height: 400px;
+  height: auto;
+}
+
+/* Slider */
+.slider {
+  width: 400px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background: white;
+  margin: 20px auto;
+}
+
+.slides {
+  display: flex;
+  width: 300%;
+  transition: transform 0.5s ease;
+}
+
+.item {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+}
+
+.item img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+#slide1:checked ~ .slides {
+  transform: translateX(0);
+}
+
+#slide2:checked ~ .slides {
+  transform: translateX(-33.3333%);
+}
+
+#slide3:checked ~ .slides {
+  transform: translateX(-66.6666%);
+}
+
+.navigation {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.bar {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #bbb;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.bar:hover {
+  background: #333;
+}
+
+/* Botones de acción */
+.acciones {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.acciones button {
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.acciones button:hover {
+  background-color: #cc5200;
+}
+
+/* Formulario de contacto */
+.contacto {
+  background: white;
+  padding: 20px;
+  max-width: 400px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contacto h2 {
+  text-align: center;
+}
+
+.contacto input,
+.contacto textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contacto button {
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Pie de página */
+footer {
+  text-align: center;
+  justify-content: space-between;
+  padding: 10px;
+  background: #bc2525;
+}
+
+footer a {
+  color: aqua;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Sección de video promocional */
+.video {
+  text-align: center;
+  margin: 60px 0;
+  padding: 40px 20px;
+  background: linear-gradient(180deg, #bb0b0b 0%, #5a0b0b 100%);
+  border-top: 5px solid #ff6600;
+  border-bottom: 5px solid #ff6600;
+}
+
+.video h2 {
+  font-size: 2.2em;
+  color: #fff;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.video video {
+  max-width: 90%;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.video video:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.7);
+}
+
+/* Animación sutil de aparición */
+@keyframes fadeInVideo {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.video {
+  animation: fadeInVideo 1.5s ease-in-out;
+}
